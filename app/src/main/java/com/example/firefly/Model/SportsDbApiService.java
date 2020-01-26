@@ -1,4 +1,4 @@
-package com.example.firefly;
+package com.example.firefly.Model;
 
 import retrofit2.http.GET;
 import io.reactivex.rxjava3.core.Single;
