@@ -12,3 +12,7 @@
 /captures
 .externalNativeBuild
 .cxx
+requirements.txt
+sampleData.json
+.idea/vcs.xml
+/.idea/misc.xml
