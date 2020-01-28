@@ -5,7 +5,7 @@ import io.reactivex.rxjava3.core.Single;
 
 public interface SportsDbApiService {
 
-    //Get games scores and metadatas
+    //Get data for g & gms
     @GET("latestamericanfootball.php")
     Single<GameResponse> getFootballData();
 

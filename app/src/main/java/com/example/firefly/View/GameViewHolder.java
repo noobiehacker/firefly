@@ -4,9 +4,11 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
-import com.example.firefly.Model.GameScore;
+
+import com.example.firefly.Model.G;
 import com.example.firefly.R;
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class GameViewHolder extends RecyclerView.ViewHolder {
 
@@ -27,22 +29,23 @@ public class GameViewHolder extends RecyclerView.ViewHolder {
 
     public GameViewHolder(@NonNull View itemView) {
         super(itemView);
+        ButterKnife.bind(this, itemView);
     }
 
-    public void populateGameData(GameScore gameScore) {
-        eidTextView.setText(gameScore.eid);
-        gsisTextView.setText(gameScore.gsis);
-        dTextView.setText(gameScore.d);
-        tTextView.setText(gameScore.t);
-        gTextView.setText(gameScore.q);
-        hTextView.setText(gameScore.h);
-        hnnTextView.setText(gameScore.hnn);
-        hsTextView.setText(gameScore.hs);
-        vTextView.setText(gameScore.v);
-        vnnTextView.setText(gameScore.vnn);
-        vsTextView.setText(gameScore.vs);
-        rzTextView.setText(gameScore.rz);
-        gaTextView.setText(gameScore.ga);
-        gtTextView.setText(gameScore.gt);
+    public void populateGameData(G g) {
+        eidTextView.setText(g.eid);
+        gsisTextView.setText(g.gsis);
+        dTextView.setText(g.d);
+        tTextView.setText(g.t);
+        gTextView.setText(g.q);
+        hTextView.setText(g.h);
+        hnnTextView.setText(g.hnn);
+        hsTextView.setText(g.hs);
+        vTextView.setText(g.v);
+        vnnTextView.setText(g.vnn);
+        vsTextView.setText(g.vs);
+        rzTextView.setText(g.rz);
+        gaTextView.setText(g.ga);
+        gtTextView.setText(g.gt);
     }
 }

@@ -1,10 +1,8 @@
 package com.example.firefly.Model;
 
-import java.util.List;
+import com.google.gson.annotations.SerializedName;
 
 public class GameResponse {
-
-    public GameMetaData metaData;
-    public List<GameScore> scores;
-
+    @SerializedName("gms")
+    public Gms gms;
 }

@@ -1,6 +1,6 @@
 package com.example.firefly.Model;
 
-public class GameScore {
+public class G {
     public String eid;
     public String gsis;
     public String d;
