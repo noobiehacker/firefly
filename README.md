@@ -17,8 +17,8 @@ Scrren Shot:
 
 Login :
 
-![Login]https://github.com/noobiehacker/firefly/blob/master/ScreenShots/0.png?raw=true
+![Login](https://github.com/noobiehacker/firefly/blob/master/ScreenShots/0.png?raw=true)
 
 Game :
 
-![GameData]https://github.com/noobiehacker/firefly/blob/master/ScreenShots/1.png?raw=true
+![GameData](https://github.com/noobiehacker/firefly/blob/master/ScreenShots/1.png?raw=true)
