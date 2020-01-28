@@ -46,4 +46,10 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
     //Gson
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    //Room DB
+    def room_version = "2.2.3"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
 }
