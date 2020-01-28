@@ -16,6 +16,8 @@ import com.example.firefly.Model.Gms;
 import com.example.firefly.ViewModel.GameViewModel;
 import com.example.firefly.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import hu.akarnokd.rxjava3.android.AndroidInteropSchedulers;
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.SingleObserver;
@@ -24,9 +26,9 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class GameActivity extends AppCompatActivity {
 
-    private GameViewModel gameViewModel = new GameViewModel();
+    private GameViewModel gameViewModel;
     private GameAdapter gameAdapter = new GameAdapter();
-    private RecyclerView recyclerView;
+    @BindView(R.id.recyclerView) RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +42,10 @@ public class GameActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
                 refreshFootballData();
         });
-        recyclerView = findViewById(R.id.recyclerView);
+        ButterKnife.bind(this);
         recyclerView.setAdapter(gameAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        gameViewModel = new GameViewModel(getApplicationContext());
     }
 
     @Override
@@ -89,10 +92,10 @@ public class GameActivity extends AppCompatActivity {
 
             @Override
             public void onError(@NonNull Throwable e) {
-                //Propagate Error to user
-                String errorMsg = e.getMessage();
-                Toast.makeText(getBaseContext(), errorMsg, Toast.LENGTH_LONG);
+                String errorMsg = "Failed To Get Data : " + e.getMessage();
+                Toast.makeText(getBaseContext(), errorMsg, Toast.LENGTH_LONG).show();
             }
         });
     }
+
 }

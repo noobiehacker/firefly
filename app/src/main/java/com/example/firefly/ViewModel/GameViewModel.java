@@ -1,6 +1,6 @@
 package com.example.firefly.ViewModel;
 
-import android.content.res.Resources;
+import android.content.Context;
 
 import com.example.firefly.Model.GameDataDeserializer;
 import com.example.firefly.Model.GameResponse;
@@ -17,8 +17,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class GameViewModel {
 
-    private String baseUrl = Resources.getSystem().getString(R.string.sportsDbBaseUrl);
     private Single<GameResponse> response;
+    private Context context;
 
     public Single<GameResponse> getGameResonse(){
         SportsDbApiService service = getApiService();
@@ -33,7 +33,7 @@ public class GameViewModel {
                 .create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(baseUrl)
+                .baseUrl(getBaseUrl())
                 .client(new OkHttpClient())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
@@ -42,4 +42,11 @@ public class GameViewModel {
         return retrofit.create(SportsDbApiService.class);
     }
 
+    private String getBaseUrl(){
+        return context.getResources().getString(R.string.sportsDbBaseUrl);
+    }
+
+    public GameViewModel(Context context) {
+        this.context = context;
+    }
 }
