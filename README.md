@@ -7,7 +7,7 @@
 
 3)On Football Game Screen, click the bottom right floating button to get/refresh football data
 
-4)Dependency we need includes `RoomDB`, `Retrofit2`, `Rxjava3`, 'Okhttpclient' ... etc
+4)Dependency we need includes `RoomDB`, `Retrofit2`, `Rxjava3`, `Okhttpclient` ... etc
 
 **Future Work:**
 
