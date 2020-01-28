@@ -15,10 +15,6 @@ Future Work:
 
 Scrren Shot:
 
-Login :
+Login & Game data Screen:
 
-![Login](https://github.com/noobiehacker/firefly/blob/master/ScreenShots/0.jpg?raw=true)
-
-Game :
-
-![GameData](https://github.com/noobiehacker/firefly/blob/master/ScreenShots/1.jpg?raw=true)
+![Login](https://github.com/noobiehacker/firefly/blob/master/ScreenShots/0.jpg?raw=true)![GameData](https://github.com/noobiehacker/firefly/blob/master/ScreenShots/1.jpg?raw=true)
