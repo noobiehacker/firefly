@@ -12,3 +12,13 @@ Instruction:
 Future Work:
 
 1)Add a feature to set/get favourite team games (Create another Table in DB to persist that data)
+
+Scrren Shot:
+
+Login :
+
+![Login]https://github.com/noobiehacker/firefly/blob/master/ScreenShots/0.png?raw=true
+
+Game :
+
+![GameData]https://github.com/noobiehacker/firefly/blob/master/ScreenShots/1.png?raw=true
