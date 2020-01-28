@@ -12,3 +12,6 @@ Instruction:
 Future Work:
 
 1)Add a feature to set/get favourite team games (Create another Table in DB to persist that data)
+
+Screen Shot:
+
