@@ -46,6 +46,7 @@ public class GameActivity extends AppCompatActivity {
         recyclerView.setAdapter(gameAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         gameViewModel = new GameViewModel(getApplicationContext());
+        refreshFootballData();
     }
 
     @Override
